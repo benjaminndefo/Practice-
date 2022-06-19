@@ -1,0 +1,32 @@
+google.com
+
+PORT    STATE SERVICE
+25/tcp  open  smtp
+80/tcp  open  http
+443/tcp open  https
+
+facebook.com 
+
+PORT     STATE  SERVICE
+25/tcp   open   smtp
+80/tcp   open   http
+443/tcp  open   https
+843/tcp  closed unknown
+5222/tcp closed xmpp-client
+5228/tcp closed hpvroom
+8883/tcp closed secure-mqtt
+
+Amazon.com
+
+PORT    STATE SERVICE
+25/tcp  open  smtp
+80/tcp  open  http
+443/tcp open  https
+
+Herokuapp.com
+
+PORT    STATE SERVICE
+25/tcp  open  smtp
+80/tcp  open  http
+443/tcp open  https
+
