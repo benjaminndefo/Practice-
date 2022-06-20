@@ -1,0 +1,48 @@
+**step 1:
+
+i turned on my hotspot on my phone and connected my laptop to it
+
+
+**step 2:
+
+i went to my terminal and checked my ipconfiguration using "ifconfig"
+
+
+my laptop wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+          inet 192.168.43.87  netmask 255.255.255.0  broadcast 192.168.43.255
+          inet6 fe80::f9e4:6708:7ff3:237c  prefixlen 64  scopeid 0x20<link>
+          ether 58:91:cf:6a:bd:32  txqueuelen 1000  (Ethernet)
+          RX packets 2092  bytes 167327 (163.4 KiB)
+          RX errors 0  dropped 0  overruns 0  frame 0
+          TX packets 2193  bytes 239146 (233.5 KiB)
+          TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+then i used the route command to identify my phone ip address and the default ip 
+
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         192.168.43.1    0.0.0.0         UG    600    0        0 wlan0
+192.168.43.0    0.0.0.0         255.255.255.0   U     600    0        0 wlan0
+
+
+
+**step 3:
+
+i used nmap to scan every available port to know how many devices are connected
+
+└─$ nmap 192.168.43.0 255        
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-06-20 09:22 WAT
+Nmap done: 2 IP addresses (0 hosts up) scanned in 3.05 seconds
+
+
+**step 3:
+
+i created a door on my phone "nc -nlvp 1050"
+
+then connected to it using my laptop and my phones ip address specifying port 1050 "nc 192.168.43.1 1050"
+
+
+
+it successfully connected ;).
+
+
